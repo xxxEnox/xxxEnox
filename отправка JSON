@@ -1,0 +1,14 @@
+mport requests
+import json
+
+with open('resume.json', 'r') as file:
+    resume_data = json.load(file)
+
+url = " "
+
+response = requests.post(url, json={" ": resume_data})
+
+if response.status_code == 200:
+    print("Резюме успешно отправлено!")
+else:
+    print("Произошла ошибка при отправке резюме.")
